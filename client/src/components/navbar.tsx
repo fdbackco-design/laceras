@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImage from "@assets/laceras-logo.png";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -24,9 +25,11 @@ export default function Navbar() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" data-testid="link-home">
-            <div className="font-playfair text-2xl font-bold text-primary">
-              라쎄라쓰라
-            </div>
+            <img 
+              src={logoImage} 
+              alt="La Ceras France" 
+              className="h-10 w-auto"
+            />
           </Link>
           
           {/* Desktop Navigation */}
