@@ -9,9 +9,6 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onFavorite, showFavorite = true }: ProductCardProps) {
-  const formatPrice = (price: string) => {
-    return new Intl.NumberFormat('ko-KR').format(parseInt(price));
-  };
 
   return (
     <Card className="product-card bg-card rounded-lg overflow-hidden shadow-sm" data-testid={`card-product-${product.id}`}>

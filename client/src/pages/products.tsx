@@ -57,10 +57,7 @@ export default function Products() {
                   </li>
                 ))}
               </ul>
-              <div className="flex items-center space-x-4">
-                <div className="text-3xl font-bold" data-testid="text-featured-price">
-                  ₩{new Intl.NumberFormat('ko-KR').format(parseInt(featuredProduct.price))}
-                </div>
+              <div className="flex items-center">
                 <button 
                   className="bg-primary text-primary-foreground px-6 py-3 hover:bg-opacity-90 transition-colors"
                   data-testid="button-purchase"
