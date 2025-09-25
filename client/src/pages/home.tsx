@@ -1,14 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import HeroBanner from "@/components/hero-banner";
 import ProductCard from "@/components/product-card";
-import { type Product } from "@shared/schema";
+import { products } from "@/data/products";
 
 export default function Home() {
-  const { data: products, isLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-  });
-
-  const featuredProducts = products?.slice(0, 3) || [];
+  const featuredProducts = products.slice(0, 3);
+  const isLoading = false;
 
   return (
     <div className="pt-20">

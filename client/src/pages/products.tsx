@@ -1,14 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import ProductCard from "@/components/product-card";
-import { type Product } from "@shared/schema";
 import { useState } from "react";
+import { products } from "@/data/products";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  
-  const { data: products, isLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-  });
+  const isLoading = false;
 
   const categories = ["all", "하드셸", "소프트", "캐리온", "트렁크", "비즈니스", "더플백"];
   

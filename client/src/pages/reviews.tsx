@@ -1,13 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import ReviewCard from "@/components/review-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
-import { type Review } from "@shared/schema";
+import { reviews } from "@/data/reviews";
 
 export default function Reviews() {
-  const { data: reviews, isLoading } = useQuery<Review[]>({
-    queryKey: ["/api/reviews"],
-  });
+  const isLoading = false;
 
   const averageRating = reviews?.length 
     ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length 
