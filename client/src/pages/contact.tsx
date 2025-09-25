@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,7 +18,6 @@ const extendedSchema = insertContactInquirySchema.extend({
 
 export default function Contact() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const form = useForm<InsertContactInquiry & { privacyAgreed: boolean }>({
@@ -36,27 +33,6 @@ export default function Contact() {
     },
   });
 
-  const submitInquiry = useMutation({
-    mutationFn: async (data: InsertContactInquiry) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "문의 접수 완료",
-        description: "문의가 성공적으로 접수되었습니다. 빠른 시일 내에 답변드리겠습니다.",
-      });
-      form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contact"] });
-    },
-    onError: (error) => {
-      toast({
-        title: "문의 접수 실패",
-        description: "문의 접수 중 오류가 발생했습니다. 다시 시도해주세요.",
-        variant: "destructive",
-      });
-      console.error("Contact form error:", error);
-    },
-  });
 
   const onSubmit = (data: InsertContactInquiry & { privacyAgreed: boolean }) => {
     if (!data.privacyAgreed) {
@@ -68,8 +44,17 @@ export default function Contact() {
       return;
     }
 
-    const { privacyAgreed, ...inquiryData } = data;
-    submitInquiry.mutate(inquiryData);
+    // Static deployment: Show contact info instead of form submission
+    const emailBody = `문의 유형: ${data.inquiryType}\n제목: ${data.subject}\n\n${data.message}\n\n고객 정보:\n이름: ${data.name}\n이메일: ${data.email}\n전화번호: ${data.phone || '미제공'}`;
+    const emailLink = `mailto:contact@laceras.fr?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    window.open(emailLink, '_blank');
+    
+    toast({
+      title: "이메일 클라이언트가 열렸습니다",
+      description: "문의 내용이 포함된 이메일 작성 창이 열렸습니다. 이메일을 전송해주세요.",
+    });
+    form.reset();
   };
 
   const faqItems = [
@@ -338,10 +323,9 @@ export default function Contact() {
                 <Button 
                   type="submit" 
                   className="w-full"
-                  disabled={submitInquiry.isPending}
                   data-testid="button-submit-inquiry"
                 >
-                  {submitInquiry.isPending ? "전송 중..." : "문의 보내기"}
+                  문의 보내기
                 </Button>
               </form>
             </Form>
