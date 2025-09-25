@@ -53,7 +53,7 @@ export class MemStorage implements IStorage {
           "독일산 폴리카보네이트 소재와 프랑스 전통 가죽공예가 만나 탄생한 최고급 하드셸 캐리어입니다. 10년 품질보증과 함께 평생 A/S를 제공합니다.",
         price: "980000",
         category: "하드셸",
-        imageUrl: "/assets/carri1.jpg",
+        imageUrl: "/assets/luggage-collection.jpg",
         features: [
           "100% 폴리카보네이트 하드셸",
           "TSA 승인 잠금장치",
