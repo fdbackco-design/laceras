@@ -12,12 +12,16 @@ export default function ProductCard({ product, onFavorite, showFavorite = true }
 
   return (
     <Card className="product-card bg-card rounded-lg overflow-hidden shadow-sm" data-testid={`card-product-${product.id}`}>
-      <div className="aspect-square overflow-hidden">
+      <div className="aspect-square overflow-hidden bg-muted flex items-center justify-center">
         <img 
           src={product.imageUrl}
           alt={product.name}
           className="w-full h-full object-cover"
           data-testid={`img-product-${product.id}`}
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.src = "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800";
+          }}
         />
       </div>
       <CardContent className="p-6">
