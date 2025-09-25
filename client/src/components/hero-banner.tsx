@@ -1,9 +1,23 @@
 import { Link } from "wouter";
+import heroVideo from "@assets/hero-video.mp4";
 
 export default function HeroBanner() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden hero-video-placeholder">
-      <div className="absolute inset-0 video-overlay"></div>
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <video 
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        data-testid="video-hero-background"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
       
       <div className="relative z-10 text-center text-white px-6 animate-fade-in-up">
         <h1 className="font-playfair text-6xl md:text-8xl font-bold mb-6" data-testid="text-hero-title">
@@ -25,10 +39,6 @@ export default function HeroBanner() {
         </Link>
       </div>
       
-      {/* Video placeholder comment */}
-      <div className="absolute bottom-4 right-4 text-white/60 text-sm">
-        {/* TODO: Replace with 15-second hero video showcasing luxury carriers */}
-      </div>
     </section>
   );
 }
