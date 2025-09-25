@@ -27,10 +27,7 @@ export default function ProductCard({ product, onFavorite, showFavorite = true }
         <p className="text-muted-foreground mb-4 line-clamp-2" data-testid={`text-product-description-${product.id}`}>
           {product.description}
         </p>
-        <div className="flex justify-between items-center">
-          <div className="text-xl font-bold" data-testid={`text-product-price-${product.id}`}>
-            ₩{formatPrice(product.price)}
-          </div>
+        <div className="flex justify-end items-center">
           {showFavorite && (
             <button 
               className="text-accent hover:text-accent/80 transition-colors"
