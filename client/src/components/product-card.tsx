@@ -12,11 +12,14 @@ export default function ProductCard({ product, onFavorite, showFavorite = true }
 
   return (
     <Card className="product-card bg-card rounded-lg overflow-hidden shadow-sm" data-testid={`card-product-${product.id}`}>
-      <div 
-        className="aspect-square bg-cover bg-center"
-        style={{ backgroundImage: `url(${product.imageUrl})` }}
-        data-testid={`img-product-${product.id}`}
-      />
+      <div className="aspect-square overflow-hidden">
+        <img 
+          src={product.imageUrl}
+          alt={product.name}
+          className="w-full h-full object-cover"
+          data-testid={`img-product-${product.id}`}
+        />
+      </div>
       <CardContent className="p-6">
         <h3 className="font-playfair text-xl font-semibold mb-2" data-testid={`text-product-name-${product.id}`}>
           {product.name}
