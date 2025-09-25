@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="font-playfair text-2xl font-bold mb-4" data-testid="text-footer-brand">
-              라쎄라쓰라
+              La Ceras
             </div>
             <p className="text-primary-foreground/80 mb-6" data-testid="text-footer-description">
               프랑스의 전통과 혁신이 만나는<br />
