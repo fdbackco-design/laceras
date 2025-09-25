@@ -57,14 +57,7 @@ export default function Products() {
                   </li>
                 ))}
               </ul>
-              <div className="flex items-center">
-                <button 
-                  className="bg-primary text-primary-foreground px-6 py-3 hover:bg-opacity-90 transition-colors"
-                  data-testid="button-purchase"
-                >
-                  구매하기
-                </button>
-              </div>
+              
             </div>
           </div>
         )}
