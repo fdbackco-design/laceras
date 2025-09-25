@@ -1,3 +1,4 @@
+
 import { Link } from "wouter";
 import heroVideo from "@assets/hero-video.mp4";
 
