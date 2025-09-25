@@ -102,7 +102,7 @@ export default function Contact() {
                   <div className="font-semibold mb-1" data-testid="text-office-label">본사</div>
                   <div className="text-muted-foreground" data-testid="text-office-address">
                     서울특별시 강남구 청담동 123-45<br />
-                    라쎄라쓰라 타워 12층
+                    라쎄라스 타워 12층
                   </div>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 # Overview
 
-라쎄라쓰라 (L'Art du Voyage Français) is a luxury luggage e-commerce website built with modern web technologies. The application presents a premium French-inspired travel goods brand with a sophisticated user interface featuring product catalogs, customer reviews, brand storytelling, and contact functionality. The project implements a full-stack architecture with React frontend, Express backend, and PostgreSQL database integration.
+라쎄라스 (L'Art du Voyage Français) is a luxury luggage e-commerce website built with modern web technologies. The application presents a premium French-inspired travel goods brand with a sophisticated user interface featuring product catalogs, customer reviews, brand storytelling, and contact functionality. The project implements a full-stack architecture with React frontend, Express backend, and PostgreSQL database integration.
 
 # User Preferences
 
