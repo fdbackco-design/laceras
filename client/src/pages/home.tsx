@@ -49,8 +49,8 @@ export default function Home() {
                 <div className="bg-card rounded-lg overflow-hidden shadow-lg" data-testid="card-collection-set">
                   <div className="aspect-square overflow-hidden">
                     <img 
-                      src="/assets/carri-set.jpg" 
-                      alt="라쎄라스 캐리어 컬렉션 세트 - 전체 뷰" 
+                      src="/attached_assets/image_1758871175026.png" 
+                      alt="제이일렉트릭 캐리어 컬렉션 세트 - 전체 뷰" 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       data-testid="img-collection-set"
                     />
