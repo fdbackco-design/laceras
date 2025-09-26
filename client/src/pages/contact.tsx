@@ -89,193 +89,35 @@ export default function Contact() {
         </div>
 
         <div className="max-w-2xl mx-auto">
-          {/* Contact Form */}
+          {/* FAQ Section */}
           <div>
-            <h2 className="font-playfair text-3xl font-bold mb-8" data-testid="text-inquiry-form-title">
-              문의하기
-            </h2>
-            
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>이름 *</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="성함을 입력해주세요" 
-                            {...field} 
-                            data-testid="input-name"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>연락처 *</FormLabel>
-                        <FormControl>
-                          <Input 
-                            type="tel" 
-                            placeholder="010-1234-5678" 
-                            {...field} 
-                            data-testid="input-phone"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>이메일 *</FormLabel>
-                      <FormControl>
-                        <Input 
-                          type="email" 
-                          placeholder="example@email.com" 
-                          {...field} 
-                          data-testid="input-email"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="inquiryType"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>문의 유형</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger data-testid="select-inquiry-type">
-                            <SelectValue placeholder="문의 유형을 선택해주세요" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="제품 문의">제품 문의</SelectItem>
-                          <SelectItem value="A/S 문의">A/S 문의</SelectItem>
-                          <SelectItem value="주문/배송 문의">주문/배송 문의</SelectItem>
-                          <SelectItem value="기타 문의">기타 문의</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>제목 *</FormLabel>
-                      <FormControl>
-                        <Input 
-                          placeholder="문의 제목을 입력해주세요" 
-                          {...field} 
-                          data-testid="input-subject"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>문의 내용 *</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          rows={6} 
-                          placeholder="자세한 문의 내용을 작성해주세요" 
-                          {...field} 
-                          data-testid="textarea-message"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="privacyAgreed"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          data-testid="checkbox-privacy"
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm text-muted-foreground">
-                          개인정보 처리방침에 동의합니다. *
-                        </FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-
-                <Button 
-                  type="submit" 
-                  className="w-full"
-                  data-testid="button-submit-inquiry"
-                >
-                  문의 보내기
-                </Button>
-              </form>
-            </Form>
-
-            {/* FAQ Section */}
-            <div className="mt-12">
-              <h3 className="font-playfair text-2xl font-bold mb-6" data-testid="text-faq-title">
-                자주 묻는 질문
-              </h3>
-              <div className="space-y-4">
-                {faqItems.map((item, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-4">
-                      <button
-                        className="w-full flex justify-between items-center text-left"
-                        onClick={() => toggleFaq(index)}
-                        data-testid={`button-faq-${index}`}
-                      >
-                        <span className="font-medium">{item.question}</span>
-                        {expandedFaq === index ? (
-                          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-                        )}
-                      </button>
-                      {expandedFaq === index && (
-                        <div className="mt-3 text-muted-foreground" data-testid={`text-faq-answer-${index}`}>
-                          {item.answer}
-                        </div>
+            <h3 className="font-playfair text-2xl font-bold mb-6" data-testid="text-faq-title">
+              자주 묻는 질문
+            </h3>
+            <div className="space-y-4">
+              {faqItems.map((item, index) => (
+                <Card key={index}>
+                  <CardContent className="p-4">
+                    <button
+                      className="w-full flex justify-between items-center text-left"
+                      onClick={() => toggleFaq(index)}
+                      data-testid={`button-faq-${index}`}
+                    >
+                      <span className="font-medium">{item.question}</span>
+                      {expandedFaq === index ? (
+                        <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-muted-foreground" />
                       )}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                    </button>
+                    {expandedFaq === index && (
+                      <div className="mt-3 text-muted-foreground" data-testid={`text-faq-answer-${index}`}>
+                        {item.answer}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
