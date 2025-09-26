@@ -20,20 +20,20 @@ export default function Products() {
   };
 
   return (
-    <div className="pt-20 pb-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h1 className="font-playfair text-6xl font-bold mb-6" data-testid="text-products-title">
+    <div className="pt-20 pb-12 sm:pb-16 lg:pb-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6" data-testid="text-products-title">
             Products
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="text-products-description">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl sm:max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed" data-testid="text-products-description">
             프랑스의 세련미가 담긴 프리미엄 캐리어 컬렉션
           </p>
         </div>
 
         {/* Featured Product */}
         {featuredProduct && (
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-20">
             <div 
               className="aspect-square bg-cover bg-center rounded-lg"
               style={{ backgroundImage: `url(${featuredProduct.imageUrl})` }}
@@ -43,17 +43,17 @@ export default function Products() {
               <span className="text-accent text-sm font-medium uppercase tracking-wide" data-testid="text-featured-label">
                 Featured
               </span>
-              <h2 className="font-playfair text-4xl font-bold mt-2 mb-6" data-testid="text-featured-name">
+              <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6" data-testid="text-featured-name">
                 {featuredProduct.name}
               </h2>
-              <p className="text-lg text-muted-foreground mb-8" data-testid="text-featured-description">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed" data-testid="text-featured-description">
                 {featuredProduct.description}
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                 {featuredProduct.features.map((feature, index) => (
-                  <li key={index} className="flex items-center" data-testid={`text-feature-${index}`}>
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                    <span>{feature}</span>
+                  <li key={index} className="flex items-start" data-testid={`text-feature-${index}`}>
+                    <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="text-sm sm:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
