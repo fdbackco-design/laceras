@@ -56,7 +56,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="font-playfair text-xl font-semibold mb-2" data-testid="text-collection-set-title">
+                    <h4 className="font-pretendard text-xl font-semibold mb-2" data-testid="text-collection-set-title">
                       컬렉션 세트
                     </h4>
                     <p className="text-muted-foreground text-sm" data-testid="text-collection-set-description">
@@ -75,7 +75,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="font-playfair text-xl font-semibold mb-2" data-testid="text-collection-scene-title">
+                    <h4 className="font-pretendard text-xl font-semibold mb-2" data-testid="text-collection-scene-title">
                       럭셔리 라이프스타일
                     </h4>
                     <p className="text-muted-foreground text-sm" data-testid="text-collection-scene-description">
@@ -94,7 +94,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="font-playfair text-xl font-semibold mb-2" data-testid="text-collection-main-title">
+                    <h4 className="font-pretendard text-xl font-semibold mb-2" data-testid="text-collection-main-title">
                       디테일 뷰
                     </h4>
                     <p className="text-muted-foreground text-sm" data-testid="text-collection-main-description">
