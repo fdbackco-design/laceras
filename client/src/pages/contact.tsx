@@ -1,16 +1,39 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
+import {
+  insertContactInquirySchema,
+  type InsertContactInquiry,
+} from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MapPin, Phone, Mail, Clock, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 const extendedSchema = insertContactInquirySchema.extend({
   privacyAgreed: insertContactInquirySchema.shape.message.refine(() => true),
@@ -33,8 +56,9 @@ export default function Contact() {
     },
   });
 
-
-  const onSubmit = (data: InsertContactInquiry & { privacyAgreed: boolean }) => {
+  const onSubmit = (
+    data: InsertContactInquiry & { privacyAgreed: boolean },
+  ) => {
     if (!data.privacyAgreed) {
       toast({
         title: "개인정보 처리방침 동의 필요",
@@ -45,14 +69,15 @@ export default function Contact() {
     }
 
     // Static deployment: Show contact info instead of form submission
-    const emailBody = `문의 유형: ${data.inquiryType}\n제목: ${data.subject}\n\n${data.message}\n\n고객 정보:\n이름: ${data.name}\n이메일: ${data.email}\n전화번호: ${data.phone || '미제공'}`;
+    const emailBody = `문의 유형: ${data.inquiryType}\n제목: ${data.subject}\n\n${data.message}\n\n고객 정보:\n이름: ${data.name}\n이메일: ${data.email}\n전화번호: ${data.phone || "미제공"}`;
     const emailLink = `mailto:contact@laceras.fr?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(emailBody)}`;
-    
-    window.open(emailLink, '_blank');
-    
+
+    window.open(emailLink, "_blank");
+
     toast({
       title: "이메일 클라이언트가 열렸습니다",
-      description: "문의 내용이 포함된 이메일 작성 창이 열렸습니다. 이메일을 전송해주세요.",
+      description:
+        "문의 내용이 포함된 이메일 작성 창이 열렸습니다. 이메일을 전송해주세요.",
     });
     form.reset();
   };
@@ -60,11 +85,11 @@ export default function Contact() {
   const faqItems = [
     {
       question: "배송은 얼마나 걸리나요?",
-      answer: "국내 배송은 주문 후 2-3일, 해외 배송은 5-7일 소요됩니다.",
+      answer: "국내 배송은 주문 후 2-3일 소요됩니다.",
     },
     {
-      question: "A/S 기간은 얼마나 되나요?",
-      answer: "모든 제품은 10년 품질보증과 평생 A/S를 제공합니다.",
+      question: "A/S는 가능한가요?",
+      answer: "모든 제품은 A/S를 제공합니다.",
     },
     {
       question: "교환/환불이 가능한가요?",
@@ -80,10 +105,16 @@ export default function Contact() {
     <div className="pt-20 pb-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h1 className="font-playfair text-6xl font-bold mb-6" data-testid="text-contact-title">
+          <h1
+            className="font-playfair text-6xl font-bold mb-6"
+            data-testid="text-contact-title"
+          >
             Customer Service
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-description">
+          <p
+            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            data-testid="text-contact-description"
+          >
             언제든지 문의해 주세요. 최고의 서비스로 도와드리겠습니다.
           </p>
         </div>
@@ -91,7 +122,10 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto">
           {/* FAQ Section */}
           <div>
-            <h3 className="font-playfair text-2xl font-bold mb-6" data-testid="text-faq-title">
+            <h3
+              className="font-playfair text-2xl font-bold mb-6"
+              data-testid="text-faq-title"
+            >
               자주 묻는 질문
             </h3>
             <div className="space-y-4">
@@ -111,7 +145,10 @@ export default function Contact() {
                       )}
                     </button>
                     {expandedFaq === index && (
-                      <div className="mt-3 text-muted-foreground" data-testid={`text-faq-answer-${index}`}>
+                      <div
+                        className="mt-3 text-muted-foreground"
+                        data-testid={`text-faq-answer-${index}`}
+                      >
                         {item.answer}
                       </div>
                     )}
