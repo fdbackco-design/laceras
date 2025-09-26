@@ -15,7 +15,7 @@ export default function Brand() {
           <div className="relative z-10 h-full flex items-center justify-center text-white text-center">
             <div>
               <h1
-                className="font-playfair text-6xl font-bold mb-4"
+                className="font-pretendard text-6xl font-bold mb-4"
                 data-testid="text-brand-title"
               >
                 Notre Histoire
@@ -31,7 +31,7 @@ export default function Brand() {
         <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
           <div>
             <h2
-              className="font-playfair text-4xl font-bold mb-6"
+              className="font-pretendard text-4xl font-bold mb-6"
               data-testid="text-craftsmanship-title"
             >
               프랑스 장인정신의 전통
@@ -98,7 +98,7 @@ export default function Brand() {
         {/* Quote Section */}
         <div className="bg-muted p-12 rounded-lg text-center">
           <blockquote
-            className="font-playfair text-2xl italic text-foreground mb-4"
+            className="font-pretendard text-2xl italic text-foreground mb-4"
             data-testid="text-founder-quote"
           >
             "여행은 단순한 이동이 아닌, 인생을 풍요롭게 하는 예술입니다"
