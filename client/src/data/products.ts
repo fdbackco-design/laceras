@@ -23,8 +23,7 @@ export const products: Product[] = [
     description:
       "이탈리아산 최고급 가죽을 사용한 소프트 캐리어로, 부드러운 터치와 실용성을 겸비했습니다.",
     category: "소프트",
-    imageUrl:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+    imageUrl: "/assets/carrier-2.jpg",
     features: [
       "이탈리아산 프리미엄 가죽",
       "확장 가능한 수납 공간",
@@ -40,8 +39,7 @@ export const products: Product[] = [
     description:
       "여행 필수템을 담은 컴팩트한 캐리온으로, 완벽한 여행의 시작을 도와드립니다.",
     category: "캐리온",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+    imageUrl: "/assets/carrier-3.jpg",
     features: [
       "기내 반입 허용 사이즈",
       "USB 충전 포트",
@@ -57,8 +55,7 @@ export const products: Product[] = [
     description:
       "클래식한 매력의 대형 여행 트렁크로, 프랑스 전통 공예의 정수를 담았습니다.",
     category: "트렁크",
-    imageUrl:
-      "https://images.unsplash.com/photo-1586899028174-e7098604235b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+    imageUrl: "/assets/carrier-4.jpg",
     features: [
       "수작업 가죽 마감",
       "황동 금속 장식",
@@ -74,8 +71,7 @@ export const products: Product[] = [
     description:
       "출장용 프리미엄 캐리어로, 비즈니스 여행에 최적화된 디자인과 기능을 제공합니다.",
     category: "비즈니스",
-    imageUrl:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+    imageUrl: "/assets/carrier-5.jpg",
     features: [
       "노트북 전용 구획",
       "정장 보관 시스템",
@@ -91,8 +87,7 @@ export const products: Product[] = [
     description:
       "주말 여행용 스타일리시한 더플백으로, 가벼우면서도 튼튼한 구조입니다.",
     category: "더플백",
-    imageUrl:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+    imageUrl: "/assets/carrier-6.jpg",
     features: ["경량 디자인", "방수 소재", "다양한 수납 포켓", "어깨끈 포함"],
     inStock: 60,
     createdAt: new Date("2024-01-01T00:00:00.000Z"),
