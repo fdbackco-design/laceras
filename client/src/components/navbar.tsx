@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" data-testid="link-home">
             <img 
-              src={logoImage} 
+              src="/assets/laceras-logo-new.png" 
               alt="La Ceras France" 
               className="h-10 w-auto"
             />
