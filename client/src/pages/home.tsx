@@ -36,7 +36,7 @@ export default function Home() {
           ) : (
             <div>
               <div className="text-center mb-12">
-                <h3 className="font-playfair text-3xl font-bold mb-4" data-testid="text-premium-series-title">
+                <h3 className="font-pretendard text-3xl font-bold mb-4" data-testid="text-premium-series-title">
                   프리미엄 하드셸 캐리어
                 </h3>
                 <p className="text-muted-foreground max-w-3xl mx-auto" data-testid="text-premium-series-description">
