@@ -80,13 +80,14 @@ export default function Home() {
                       className="font-pretendard text-xl font-semibold mb-2"
                       data-testid="text-collection-main-title"
                     >
-                      디테일 뷰
+                      컬렉션 세트
                     </h4>
                     <p
                       className="text-muted-foreground text-sm"
                       data-testid="text-collection-main-description"
                     >
-                      프랑스 전통 장인정신이 담긴 정교한 마감과 기능성
+                      28인치, 24인치, 20인치, 14인치 4단 세트로 구성된 완전한
+                      트래블 솔루션
                     </p>
                   </div>
                 </div>
@@ -136,14 +137,13 @@ export default function Home() {
                       className="font-pretendard text-xl font-semibold mb-2"
                       data-testid="text-collection-set-title"
                     >
-                      컬렉션 세트
+                      디테일 뷰
                     </h4>
                     <p
                       className="text-muted-foreground text-sm"
                       data-testid="text-collection-set-description"
                     >
-                      28인치, 24인치, 20인치, 14인치 4단 세트로 구성된 완전한
-                      트래블 솔루션
+                      프랑스 전통 장인정신이 담긴 정교한 마감과 기능성
                     </p>
                   </div>
                 </div>

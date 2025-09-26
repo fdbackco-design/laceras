@@ -122,15 +122,24 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto">
           {/* Customer Service Center */}
           <div className="bg-primary text-primary-foreground p-8 rounded-lg text-center mb-12">
-            <h2 className="font-pretendard text-3xl font-bold mb-4" data-testid="text-service-center-title">
-              라쎄라스 A/S 센터
+            <h2
+              className="font-pretendard text-3xl font-bold mb-4"
+              data-testid="text-service-center-title"
+            >
+              A/S 센터
             </h2>
-            <p className="text-primary-foreground/80 mb-6" data-testid="text-service-center-description">
-              라쎄라스 A/S 센터를 상시 운영하고 있습니다.
+            <p
+              className="text-primary-foreground/80 mb-6"
+              data-testid="text-service-center-description"
+            >
+              La Ceras A/S 센터를 상시 운영하고 있습니다.
             </p>
             <div className="flex items-center justify-center mb-6">
               <Phone className="w-6 h-6 mr-3 text-accent" />
-              <span className="text-2xl font-bold" data-testid="text-service-phone">
+              <span
+                className="text-2xl font-bold"
+                data-testid="text-service-phone"
+              >
                 031-429-8570
               </span>
             </div>
@@ -142,7 +151,7 @@ export default function Contact() {
                 점심시간 PM 12:00~ PM 13:00
               </div>
             </div>
-            <Button 
+            <Button
               className="mt-6 bg-accent hover:bg-accent/90 text-accent-foreground"
               data-testid="button-service-center"
             >

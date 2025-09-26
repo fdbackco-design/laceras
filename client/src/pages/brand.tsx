@@ -40,9 +40,8 @@ export default function Brand() {
               className="text-lg text-muted-foreground mb-6"
               data-testid="text-brand-story-1"
             >
-              1920년 파리의 한 작은 공방에서 시작된 라쎄라스라는 프랑스 전통
-              가죽공예 기술과 현대적 디자인을 결합한 럭셔리 여행용품
-              브랜드입니다.
+              1970년 파리의 한 작은 공방에서 시작된 La Ceras라는 프랑스 전통
+              기술과 현대적 디자인을 결합한 럭셔리 여행용품 브랜드입니다.
             </p>
             <p
               className="text-lg text-muted-foreground mb-6"
@@ -57,7 +56,7 @@ export default function Brand() {
                   className="text-3xl font-bold text-accent"
                   data-testid="text-heritage-years"
                 >
-                  100+
+                  50+
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Years of Heritage
@@ -68,7 +67,7 @@ export default function Brand() {
                   className="text-3xl font-bold text-accent"
                   data-testid="text-countries"
                 >
-                  50+
+                  10+
                 </div>
                 <div className="text-sm text-muted-foreground">Countries</div>
               </div>
@@ -88,8 +87,7 @@ export default function Brand() {
           <div
             className="aspect-square bg-cover bg-center rounded-lg"
             style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800')",
+              backgroundImage: "url('/assets/carri-one.png')",
             }}
             data-testid="img-craftsmanship"
           />

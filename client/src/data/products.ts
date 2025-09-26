@@ -5,7 +5,7 @@ export const products: Product[] = [
     id: "1",
     name: "프리미엄 하드셸 시리즈",
     description:
-      "독일산 폴리카보네이트 소재와 프랑스 전통 가죽공예가 만나 탄생한 최고급 하드셸 캐리어입니다. 10년 품질보증과 함께 평생 A/S를 제공합니다.",
+      "28, 24, 20, 14인치 4종 세트로 단거리부터 장거리까지 모든 여행을 완벽하게 커버하는 프리미엄 트래블 솔루션입니다.",
     category: "하드셸",
     imageUrl: "/assets/carri1.jpg",
     features: [
