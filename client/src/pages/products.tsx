@@ -64,35 +64,7 @@ export default function Products() {
 
         
 
-        {/* Product Grid */}
-        {isLoading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="bg-card rounded-lg p-6 animate-pulse" data-testid={`skeleton-product-${i}`}>
-                <div className="aspect-square bg-muted rounded mb-4"></div>
-                <div className="h-6 bg-muted rounded mb-2"></div>
-                <div className="h-4 bg-muted rounded mb-4"></div>
-                <div className="h-6 bg-muted rounded w-24"></div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
-              <ProductCard 
-                key={product.id} 
-                product={product} 
-                onFavorite={handleFavorite}
-              />
-            ))}
-          </div>
-        )}
-
-        {filteredProducts.length === 0 && !isLoading && (
-          <div className="text-center py-12" data-testid="text-no-products">
-            <p className="text-muted-foreground">선택한 카테고리에 제품이 없습니다.</p>
-          </div>
-        )}
+        
       </div>
     </div>
   );
