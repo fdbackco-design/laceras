@@ -102,48 +102,48 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-20 pb-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <div className="pt-20 pb-12 sm:pb-16 lg:pb-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
           <h1
-            className="font-playfair text-6xl font-bold mb-6"
+            className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
             data-testid="text-contact-title"
           >
             Customer Service
           </h1>
           <p
-            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl sm:max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed"
             data-testid="text-contact-description"
           >
             언제든지 문의해 주세요. 최고의 서비스로 도와드리겠습니다.
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto px-4 sm:px-0">
           {/* Customer Service Center */}
-          <div className="bg-primary text-primary-foreground p-8 rounded-lg text-center mb-12">
+          <div className="bg-primary text-primary-foreground p-6 sm:p-8 rounded-lg text-center mb-8 sm:mb-12">
             <h2
-              className="font-pretendard text-3xl font-bold mb-4"
+              className="font-pretendard text-2xl sm:text-3xl font-bold mb-3 sm:mb-4"
               data-testid="text-service-center-title"
             >
               A/S 센터
             </h2>
             <p
-              className="text-primary-foreground/80 mb-6"
+              className="text-primary-foreground/80 mb-4 sm:mb-6 text-sm sm:text-base"
               data-testid="text-service-center-description"
             >
               La Ceras A/S 센터를 상시 운영하고 있습니다.
             </p>
-            <div className="flex items-center justify-center mb-6">
-              <Phone className="w-6 h-6 mr-3 text-accent" />
+            <div className="flex items-center justify-center mb-4 sm:mb-6">
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-accent" />
               <span
-                className="text-2xl font-bold"
+                className="text-xl sm:text-2xl font-bold"
                 data-testid="text-service-phone"
               >
                 031-429-8570
               </span>
             </div>
-            <div className="space-y-2 text-primary-foreground/80">
+            <div className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-xs sm:text-sm">
               <div data-testid="text-service-hours-weekday">
                 운영시간 : AM 10:00 ~ PM 17:00
               </div>
@@ -152,7 +152,7 @@ export default function Contact() {
               </div>
             </div>
             <Button
-              className="mt-6 bg-accent hover:bg-accent/90 text-accent-foreground"
+              className="mt-4 sm:mt-6 bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base px-4 sm:px-6"
               data-testid="button-service-center"
             >
               A/S 센터 자세히 보기
@@ -162,30 +162,30 @@ export default function Contact() {
           {/* FAQ Section */}
           <div>
             <h3
-              className="font-playfair text-2xl font-bold mb-6"
+              className="font-playfair text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
               data-testid="text-faq-title"
             >
               자주 묻는 질문
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {faqItems.map((item, index) => (
                 <Card key={index}>
-                  <CardContent className="p-4">
+                  <CardContent className="p-3 sm:p-4">
                     <button
                       className="w-full flex justify-between items-center text-left"
                       onClick={() => toggleFaq(index)}
                       data-testid={`button-faq-${index}`}
                     >
-                      <span className="font-medium">{item.question}</span>
+                      <span className="font-medium text-sm sm:text-base pr-2">{item.question}</span>
                       {expandedFaq === index ? (
-                        <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                        <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                        <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0" />
                       )}
                     </button>
                     {expandedFaq === index && (
                       <div
-                        className="mt-3 text-muted-foreground"
+                        className="mt-2 sm:mt-3 text-muted-foreground text-sm sm:text-base leading-relaxed"
                         data-testid={`text-faq-answer-${index}`}
                       >
                         {item.answer}
