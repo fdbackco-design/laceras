@@ -62,25 +62,7 @@ export default function Products() {
           </div>
         )}
 
-        {/* Category Filter */}
-        <div className="mb-12">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  selectedCategory === category
-                    ? "bg-accent text-accent-foreground"
-                    : "bg-muted text-muted-foreground hover:bg-accent/20"
-                }`}
-                data-testid={`button-category-${category}`}
-              >
-                {category === "all" ? "전체" : category}
-              </button>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Product Grid */}
         {isLoading ? (
