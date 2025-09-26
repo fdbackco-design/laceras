@@ -14,7 +14,7 @@ export default function Home() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-5xl font-bold mb-6" data-testid="text-collection-title">
+            <h2 className="font-pretendard text-5xl font-bold mb-6" data-testid="text-collection-title">
               컬렉션
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto" data-testid="text-collection-description">
