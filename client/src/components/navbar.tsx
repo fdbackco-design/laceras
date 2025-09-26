@@ -21,23 +21,23 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-border">
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <Link href="/" data-testid="link-home">
             <img 
               src="/assets/laceras-logo-new.png" 
               alt="La Ceras France" 
-              className="h-10 w-auto"
+              className="h-8 sm:h-10 w-auto"
             />
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} data-testid={`link-${item.href.slice(1) || 'home'}`}>
                 <span
                   className={cn(
-                    "nav-link px-2 py-1 text-foreground hover:text-accent transition-colors cursor-pointer",
+                    "nav-link px-2 py-1 text-sm lg:text-base text-foreground hover:text-accent transition-colors cursor-pointer",
                     location === item.href && "active"
                   )}
                 >
@@ -49,34 +49,37 @@ export default function Navbar() {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden p-2 -mr-2 rounded-lg hover:bg-muted transition-colors"
             onClick={toggleMobileMenu}
             data-testid="button-mobile-menu"
+            aria-label="메뉴 열기/닫기"
           >
             {isMobileMenuOpen ? (
-              <X className="text-xl" />
+              <X className="w-6 h-6" />
             ) : (
-              <Menu className="text-xl" />
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-2">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} data-testid={`link-mobile-${item.href.slice(1) || 'home'}`}>
-                <div
-                  className={cn(
-                    "block px-2 py-2 text-foreground hover:text-accent transition-colors cursor-pointer",
-                    location === item.href && "text-accent font-medium"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </div>
-              </Link>
-            ))}
+          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+            <div className="space-y-1">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} data-testid={`link-mobile-${item.href.slice(1) || 'home'}`}>
+                  <div
+                    className={cn(
+                      "block px-4 py-3 rounded-lg text-foreground hover:bg-muted hover:text-accent transition-colors cursor-pointer",
+                      location === item.href && "bg-accent/10 text-accent font-medium"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </nav>
