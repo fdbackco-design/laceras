@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,9 +36,9 @@
   --sidebar-accent-foreground: hsl(0 0% 10%);
   --sidebar-border: hsl(0 0% 90%);
   --sidebar-ring: hsl(45 90% 55%);
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  --font-mono: 'Menlo', monospace;
+  --font-mono: 'Pretendard Variable', Pretendard, monospace;
   --radius: 8px;
   --shadow-2xs: 0px 2px 0px 0px hsl(45 90% 55% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(45 90% 55% / 0.00);
@@ -88,8 +88,8 @@
   font-family: 'Playfair Display', serif;
 }
 
-.font-inter {
-  font-family: 'Inter', sans-serif;
+.font-pretendard {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
 .video-overlay {

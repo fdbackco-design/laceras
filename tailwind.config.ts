@@ -67,7 +67,7 @@ export default {
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
         playfair: ["Playfair Display", "serif"],
-        inter: ["Inter", "sans-serif"],
+        pretendard: ["Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
