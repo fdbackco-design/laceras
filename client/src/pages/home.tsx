@@ -41,7 +41,6 @@ export default function Home() {
                 </h3>
                 <p className="text-muted-foreground max-w-3xl mx-auto" data-testid="text-premium-series-description">
                   폴리카보네이트 소재와 프랑스 기술이 만나 탄생한 최고급 하드셸 캐리어입니다. 
-                  10년 품질보증과 함께 평생 A/S를 제공합니다.
                 </p>
               </div>
               
