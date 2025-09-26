@@ -31,17 +31,17 @@ export default function Reviews() {
   };
 
   return (
-    <div className="pt-20 pb-20 bg-muted">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <div className="pt-20 pb-12 sm:pb-16 lg:pb-20 bg-muted">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
           <h1
-            className="font-playfair text-6xl font-bold mb-6"
+            className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
             data-testid="text-reviews-title"
           >
             Customer Reviews
           </h1>
           <p
-            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl sm:max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed"
             data-testid="text-reviews-description"
           >
             전 세계 고객들이 전하는 라쎄라스와의 특별한 여행 이야기
@@ -49,17 +49,17 @@ export default function Reviews() {
         </div>
 
         {/* Review Stats */}
-        <Card className="mb-16">
-          <CardContent className="p-8">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
+        <Card className="mb-12 sm:mb-16">
+          <CardContent className="p-4 sm:p-6 md:p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
               <div>
                 <div
-                  className="text-4xl font-bold text-accent mb-2"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
                   data-testid="text-average-rating"
                 >
                   {averageRating.toFixed(1)}
                 </div>
-                <div className="text-muted-foreground mb-2">평균 평점</div>
+                <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">평균 평점</div>
                 <div
                   className="flex justify-center"
                   data-testid="rating-average-stars"
@@ -69,30 +69,30 @@ export default function Reviews() {
               </div>
               <div>
                 <div
-                  className="text-4xl font-bold text-accent mb-2"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
                   data-testid="text-total-reviews"
                 >
                   {totalReviews.toLocaleString()}
                 </div>
-                <div className="text-muted-foreground">총 리뷰 수</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">총 리뷰 수</div>
               </div>
               <div>
                 <div
-                  className="text-4xl font-bold text-accent mb-2"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
                   data-testid="text-recommendation-rate"
                 >
                   {recommendationRate}%
                 </div>
-                <div className="text-muted-foreground">추천률</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">추천률</div>
               </div>
               <div>
                 <div
-                  className="text-4xl font-bold text-accent mb-2"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
                   data-testid="text-response-time"
                 >
                   24H
                 </div>
-                <div className="text-muted-foreground">평균 답변 시간</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">평균 답변 시간</div>
               </div>
             </div>
           </CardContent>
