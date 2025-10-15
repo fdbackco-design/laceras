@@ -6,7 +6,7 @@ export default function Brand() {
         <div
           className="relative h-64 sm:h-80 md:h-96 mb-12 sm:mb-16 rounded-lg overflow-hidden bg-cover bg-center"
           style={{
-            backgroundImage: "url('/assets/carri-set.jpg')",
+            backgroundImage: "url('/assets/france1.jpg')",
           }}
           data-testid="img-brand-hero"
         >
