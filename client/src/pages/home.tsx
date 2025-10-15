@@ -117,26 +117,26 @@ export default function Home() {
                 {/* 3) 럭셔리 라이프스타일 */}
                 <div
                   className="bg-card rounded-lg overflow-hidden shadow-lg"
-                  data-testid="card-collection-scene"
+                  data-testid="card-collection-lifestyle"
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src="/assets/carriMD.jpg"
+                      src="/assets/carrier-2.jpg"
                       alt="라쎄라스 캐리어 사용 연출 장면"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      data-testid="img-collection-scene"
+                      data-testid="img-collection-lifestyle"
                     />
                   </div>
                   <div className="p-4 sm:p-6">
                     <h4
                       className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
-                      data-testid="text-collection-scene-title"
+                      data-testid="text-collection-lifestyle-title"
                     >
                       럭셔리 라이프스타일
                     </h4>
                     <p
                       className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
-                      data-testid="text-collection-scene-description"
+                      data-testid="text-collection-lifestyle-description"
                     >
                       무소음 휠 &amp; 안정적 베어링 시스템으로 어떤 방향에서도
                       부드럽고 조용한 이동
@@ -144,31 +144,31 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* 4) 럭셔리 라이프스타일 */}
+                {/* 4) 프리미엄 디테일 */}
                 <div
                   className="bg-card rounded-lg overflow-hidden shadow-lg"
-                  data-testid="card-collection-scene"
+                  data-testid="card-collection-detail"
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src="/assets/lock.png"
-                      alt="잠금장치 클로즈업 화면"
+                      src="/assets/carrier-3.jpg"
+                      alt="프리미엄 디테일 클로즈업"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      data-testid="img-collection-scene"
+                      data-testid="img-collection-detail"
                     />
                   </div>
                   <div className="p-4 sm:p-6">
                     <h4
                       className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
-                      data-testid="text-collection-scene-title"
+                      data-testid="text-collection-detail-title"
                     >
-                      Sinking Ordinary Lock
+                      프리미엄 디테일
                     </h4>
                     <p
                       className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
-                      data-testid="text-collection-scene-description"
+                      data-testid="text-collection-detail-description"
                     >
-                      기본 락 구조를 상판과 균형감 있게 낮춰 스크래치 포인트 최소화
+                      정밀한 마감과 견고한 구조로 완성된 프리미엄 퀄리티
                     </p>
                   </div>
                 </div>
