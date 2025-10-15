@@ -162,16 +162,9 @@ export default function Contact() {
                   운영시간 : AM 10:00 ~ PM 17:00
                 </div>
                 <div data-testid="text-service-hours-weekend">
-                  점심시간 PM 12:00~ PM 13:00
+                  점심시간 PM 12:30~ PM 13:30
                 </div>
               </div>
-
-              <Button
-                className="mt-4 sm:mt-6 bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base px-4 sm:px-6"
-                data-testid="button-service-center"
-              >
-                A/S 센터 자세히 보기
-              </Button>
             </div>
           </div>
 
