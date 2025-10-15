@@ -121,7 +121,7 @@ export default function Home() {
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src="/assets/carrier-2.jpg"
+                      src="/assets/carriMD.jpg"
                       alt="라쎄라스 캐리어 사용 연출 장면"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       data-testid="img-collection-lifestyle"
@@ -151,7 +151,7 @@ export default function Home() {
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src="/assets/carrier-3.jpg"
+                      src="/assets/lock.png"
                       alt="프리미엄 디테일 클로즈업"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       data-testid="img-collection-detail"
