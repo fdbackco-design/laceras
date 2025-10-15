@@ -68,9 +68,10 @@ export default function Contact() {
       return;
     }
 
-    // Static deployment: Show contact info instead of form submission
     const emailBody = `문의 유형: ${data.inquiryType}\n제목: ${data.subject}\n\n${data.message}\n\n고객 정보:\n이름: ${data.name}\n이메일: ${data.email}\n전화번호: ${data.phone || "미제공"}`;
-    const emailLink = `mailto:contact@laceras.fr?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(emailBody)}`;
+    const emailLink = `mailto:contact@laceras.fr?subject=${encodeURIComponent(
+      data.subject,
+    )}&body=${encodeURIComponent(emailBody)}`;
 
     window.open(emailLink, "_blank");
 
@@ -87,10 +88,7 @@ export default function Contact() {
       question: "배송은 얼마나 걸리나요?",
       answer: "국내 배송은 주문 후 2-3일 소요됩니다.",
     },
-    {
-      question: "A/S는 가능한가요?",
-      answer: "모든 제품은 A/S를 제공합니다.",
-    },
+    { question: "A/S는 가능한가요?", answer: "모든 제품은 A/S를 제공합니다." },
     {
       question: "교환/환불이 가능한가요?",
       answer: "구매 후 14일 이내 미사용 제품에 한해 교환/환불이 가능합니다.",
@@ -102,11 +100,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-20 pb-12 sm:pb-16 lg:pb-20">
+    <div className="font-pretendard pt-20 pb-12 sm:pb-16 lg:pb-20">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h1
-            className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
             data-testid="text-contact-title"
           >
             Customer Service
@@ -121,48 +119,66 @@ export default function Contact() {
 
         <div className="max-w-2xl mx-auto px-4 sm:px-0">
           {/* Customer Service Center */}
-          <div className="bg-primary text-primary-foreground p-6 sm:p-8 rounded-lg text-center mb-8 sm:mb-12">
-            <h2
-              className="font-pretendard text-2xl sm:text-3xl font-bold mb-3 sm:mb-4"
-              data-testid="text-service-center-title"
-            >
-              A/S 센터
-            </h2>
-            <p
-              className="text-primary-foreground/80 mb-4 sm:mb-6 text-sm sm:text-base"
-              data-testid="text-service-center-description"
-            >
-              La Ceras A/S 센터를 상시 운영하고 있습니다.
-            </p>
-            <div className="flex items-center justify-center mb-4 sm:mb-6">
-              <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-accent" />
-              <span
-                className="text-xl sm:text-2xl font-bold"
-                data-testid="text-service-phone"
+          <div className="relative rounded-lg overflow-hidden mb-8 sm:mb-12">
+            {/* 배경 이미지 */}
+            <img
+              src="/assets/building.jpg"
+              alt="La Ceras A/S Center Building"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+
+            {/* 반투명 오버레이 */}
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+
+            {/* 내용 영역 */}
+            <div className="relative z-10 text-primary-foreground text-center p-6 sm:p-8">
+              <h2
+                className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4"
+                data-testid="text-service-center-title"
               >
-                031-429-8570
-              </span>
-            </div>
-            <div className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-xs sm:text-sm">
-              <div data-testid="text-service-hours-weekday">
-                운영시간 : AM 10:00 ~ PM 17:00
+                A/S 센터
+              </h2>
+
+              <p
+                className="text-primary-foreground/80 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed"
+                data-testid="text-service-center-description"
+              >
+                La Ceras A/S 센터를 상시 운영하고 있습니다.
+              </p>
+
+              <div className="flex items-center justify-center mb-4 sm:mb-6">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-accent" />
+                <span
+                  className="text-xl sm:text-2xl font-bold"
+                  data-testid="text-service-phone"
+                >
+                  031-429-8570
+                </span>
               </div>
-              <div data-testid="text-service-hours-weekend">
-                점심시간 PM 12:00~ PM 13:00
+
+              <div className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-xs sm:text-sm">
+                <div data-testid="text-service-hours-weekday">
+                  운영시간 : AM 10:00 ~ PM 17:00
+                </div>
+                <div data-testid="text-service-hours-weekend">
+                  점심시간 PM 12:00~ PM 13:00
+                </div>
               </div>
+
+              <Button
+                className="mt-4 sm:mt-6 bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base px-4 sm:px-6"
+                data-testid="button-service-center"
+              >
+                A/S 센터 자세히 보기
+              </Button>
             </div>
-            <Button
-              className="mt-4 sm:mt-6 bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base px-4 sm:px-6"
-              data-testid="button-service-center"
-            >
-              A/S 센터 자세히 보기
-            </Button>
           </div>
 
           {/* FAQ Section */}
           <div>
             <h3
-              className="font-playfair text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
+              className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
               data-testid="text-faq-title"
             >
               자주 묻는 질문
@@ -176,7 +192,9 @@ export default function Contact() {
                       onClick={() => toggleFaq(index)}
                       data-testid={`button-faq-${index}`}
                     >
-                      <span className="font-medium text-sm sm:text-base pr-2">{item.question}</span>
+                      <span className="font-medium text-sm sm:text-base pr-2">
+                        {item.question}
+                      </span>
                       {expandedFaq === index ? (
                         <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0" />
                       ) : (

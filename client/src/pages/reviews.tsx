@@ -31,11 +31,11 @@ export default function Reviews() {
   };
 
   return (
-    <div className="pt-20 pb-12 sm:pb-16 lg:pb-20 bg-muted">
+    <div className="font-pretendard pt-20 pb-12 sm:pb-16 lg:pb-20 bg-muted">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h1
-            className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
             data-testid="text-reviews-title"
           >
             Customer Reviews
@@ -59,7 +59,9 @@ export default function Reviews() {
                 >
                   {averageRating.toFixed(1)}
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">평균 평점</div>
+                <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">
+                  평균 평점
+                </div>
                 <div
                   className="flex justify-center"
                   data-testid="rating-average-stars"
@@ -67,6 +69,7 @@ export default function Reviews() {
                   {renderStars(averageRating)}
                 </div>
               </div>
+
               <div>
                 <div
                   className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
@@ -74,8 +77,11 @@ export default function Reviews() {
                 >
                   {totalReviews.toLocaleString()}
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">총 리뷰 수</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  총 리뷰 수
+                </div>
               </div>
+
               <div>
                 <div
                   className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
@@ -83,8 +89,11 @@ export default function Reviews() {
                 >
                   {recommendationRate}%
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">추천률</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  추천률
+                </div>
               </div>
+
               <div>
                 <div
                   className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-1 sm:mb-2"
@@ -92,7 +101,9 @@ export default function Reviews() {
                 >
                   24H
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">평균 답변 시간</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  평균 답변 시간
+                </div>
               </div>
             </div>
           </CardContent>

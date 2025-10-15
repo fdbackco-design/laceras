@@ -24,7 +24,8 @@ export default function Home() {
               className="text-muted-foreground text-base sm:text-lg max-w-xl sm:max-w-2xl mx-auto leading-relaxed px-4 sm:px-0"
               data-testid="text-collection-description"
             >
-              프랑스 장인정신으로 탄생한 프리미엄 캐리어 컬렉션을 만나보세요
+              프리미엄 디테일과 이동성까지 완성한 라쎄라스 캐리어 컬렉션을
+              만나보세요.
             </p>
           </div>
 
@@ -52,80 +53,17 @@ export default function Home() {
                 >
                   프리미엄 하드셸 캐리어
                 </h3>
-                <p
-                  className="text-muted-foreground text-sm sm:text-base max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4 sm:px-0"
-                  data-testid="text-premium-series-description"
-                >
-                  폴리카보네이트 소재와 프랑스 기술이 만나 탄생한 최고급 하드셸
-                  캐리어입니다.
-                </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {/* Product Images from Different Angles */}
-                <div
-                  className="bg-card rounded-lg overflow-hidden shadow-lg"
-                  data-testid="card-collection-main"
-                >
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src="/assets/carri-main.jpg"
-                      alt="라쎄라스 메인 캐리어 디테일"
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      data-testid="img-collection-main"
-                    />
-                  </div>
-                  <div className="p-4 sm:p-6">
-                    <h4
-                      className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
-                      data-testid="text-collection-main-title"
-                    >
-                      디테일 뷰
-                    </h4>
-                    <p
-                      className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
-                      data-testid="text-collection-main-description"
-                    >
-                      프랑스 전통 장인정신이 담긴 정교한 마감과 기능성
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="bg-card rounded-lg overflow-hidden shadow-lg"
-                  data-testid="card-collection-scene"
-                >
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src="/assets/carri-scene.jpg"
-                      alt="라쎄라스 캐리어 사용 연출 장면"
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      data-testid="img-collection-scene"
-                    />
-                  </div>
-                  <div className="p-4 sm:p-6">
-                    <h4
-                      className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
-                      data-testid="text-collection-scene-title"
-                    >
-                      럭셔리 라이프스타일
-                    </h4>
-                    <p
-                      className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
-                      data-testid="text-collection-scene-description"
-                    >
-                      프리미엄 호텔과 비즈니스 라운지에서 빛나는 품격
-                    </p>
-                  </div>
-                </div>
-
+                {/* 1) 컬렉션 세트 */}
                 <div
                   className="bg-card rounded-lg overflow-hidden shadow-lg"
                   data-testid="card-collection-set"
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src="/assets/carri-set.jpg"
+                      src="/assets/carri-main.jpg"
                       alt="라쎄라스 캐리어 컬렉션 세트 - 전체 뷰"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       data-testid="img-collection-set"
@@ -142,8 +80,95 @@ export default function Home() {
                       className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
                       data-testid="text-collection-set-description"
                     >
-                      28인치, 24인치, 20인치, 14인치 4단 세트로 구성된 완전한
-                      트래블 솔루션
+                      14인치, 20인치, 24인치, 28인치 올인원 구성
+                    </p>
+                  </div>
+                </div>
+
+                {/* 2) 디테일 뷰 */}
+                <div
+                  className="bg-card rounded-lg overflow-hidden shadow-lg"
+                  data-testid="card-collection-main"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src="/assets/carri-scene.jpg"
+                      alt="라쎄라스 메인 캐리어 디테일"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      data-testid="img-collection-main"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-6">
+                    <h4
+                      className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
+                      data-testid="text-collection-main-title"
+                    >
+                      디테일 뷰
+                    </h4>
+                    <p
+                      className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
+                      data-testid="text-collection-main-description"
+                    >
+                      하이브리드 구조(PP+PC)로 구현한 견고한 바디
+                    </p>
+                  </div>
+                </div>
+
+                {/* 3) 럭셔리 라이프스타일 */}
+                <div
+                  className="bg-card rounded-lg overflow-hidden shadow-lg"
+                  data-testid="card-collection-scene"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src="/assets/carriMD.jpg"
+                      alt="라쎄라스 캐리어 사용 연출 장면"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      data-testid="img-collection-scene"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-6">
+                    <h4
+                      className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
+                      data-testid="text-collection-scene-title"
+                    >
+                      럭셔리 라이프스타일
+                    </h4>
+                    <p
+                      className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
+                      data-testid="text-collection-scene-description"
+                    >
+                      무소음 휠 &amp; 안정적 베어링 시스템으로 어떤 방향에서도
+                      부드럽고 조용한 이동
+                    </p>
+                  </div>
+                </div>
+
+                {/* 4) 럭셔리 라이프스타일 */}
+                <div
+                  className="bg-card rounded-lg overflow-hidden shadow-lg"
+                  data-testid="card-collection-scene"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src="/assets/lock.png"
+                      alt="잠금장치 클로즈업 화면"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      data-testid="img-collection-scene"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-6">
+                    <h4
+                      className="font-pretendard text-lg sm:text-xl font-semibold mb-2"
+                      data-testid="text-collection-scene-title"
+                    >
+                      Sinking Ordinary Lock
+                    </h4>
+                    <p
+                      className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
+                      data-testid="text-collection-scene-description"
+                    >
+                      기본 락 구조를 상판과 균형감 있게 낮춰 스크래치 포인트 최소화
                     </p>
                   </div>
                 </div>
