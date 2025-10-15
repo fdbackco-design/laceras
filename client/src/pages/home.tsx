@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
 
                 {/* 4) 프리미엄 디테일 */}
-                <div
+                {/* <div
                   className="bg-card rounded-lg overflow-hidden shadow-lg"
                   data-testid="card-collection-detail"
                 >
@@ -171,7 +171,7 @@ export default function Home() {
                       정밀한 마감과 견고한 구조로 완성된 프리미엄 퀄리티
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           )}
