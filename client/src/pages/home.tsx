@@ -63,7 +63,7 @@ export default function Home() {
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src="/assets/carri-main.jpg"
+                      src="/assets/carri-main2.jpeg"
                       alt="라쎄라스 캐리어 컬렉션 세트 - 전체 뷰"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       data-testid="img-collection-set"

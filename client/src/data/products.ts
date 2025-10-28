@@ -7,7 +7,7 @@ export const products: Product[] = [
     description:
       "14인치, 20인치, 24인치, 28인치 4종 올인원 구성으로 단거리부터 장거리까지 모든 여행을 완벽하게 커버하는 프리미엄 트래블 솔루션입니다.",
     category: "하드셸",
-    imageUrl: "/assets/carri1.jpg",
+    imageUrl: "/assets/carri-main2.jpeg",
     features: [
       "하이브리드 구조(PP+PC)",
       "Sinking Ordinary Lock",
