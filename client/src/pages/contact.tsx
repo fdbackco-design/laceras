@@ -113,7 +113,7 @@ export default function Contact() {
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl sm:max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed"
             data-testid="text-contact-description"
           >
-            언제든지 문의해 주세요. 최고의 서비스로 도와드리겠습니다.
+            최고의 서비스로 도와드리겠습니다.
           </p>
         </div>
 
