@@ -132,37 +132,96 @@ export default function Contact() {
             <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
             {/* 내용 영역 */}
+
             <div className="relative z-10 text-primary-foreground text-center p-6 sm:p-8">
               <h2
                 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4"
                 data-testid="text-service-center-title"
               >
-                A/S 센터
+                고객 지원 안내
               </h2>
 
               <p
-                className="text-primary-foreground/80 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed"
+                className="text-primary-foreground/80 mb-5 sm:mb-7 text-sm sm:text-base leading-relaxed"
                 data-testid="text-service-center-description"
               >
-                La Ceras A/S 센터를 상시 운영하고 있습니다.
+                아래 연락처로 빠르게 도와드리겠습니다.
               </p>
 
-              <div className="flex items-center justify-center mb-4 sm:mb-6">
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-accent" />
-                <span
-                  className="text-xl sm:text-2xl font-bold"
-                  data-testid="text-service-phone"
-                >
-                  031-429-8570
-                </span>
+              {/* 2열 연락처 카드 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto">
+                {/* 제품 고장·불량 CS */}
+                <div className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 p-4 sm:p-5">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5">
+                      <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-base sm:text-lg font-semibold">
+                        제품 고장·불량 관련 CS 문의
+                      </div>
+                      <div className="mt-1 text-sm sm:text-base">
+                        <span className="font-bold tracking-wide text-primary-foreground">
+                          031-429-8570
+                        </span>
+                      </div>
+                      <p className="mt-2 text-xs sm:text-sm text-primary-foreground/80 leading-relaxed">
+                        “제품 고장 및 불량 문의는 고객센터로 연락 부탁드립니다.”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* B2B 문의 */}
+                <div className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 p-4 sm:p-5">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5">
+                      <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-base sm:text-lg font-semibold">
+                        B2B 문의(대량 구매·회사 납품 등)
+                      </div>
+                      <div className="mt-1 text-sm sm:text-base">
+                        <span className="font-bold tracking-wide text-primary-foreground">
+                          02-1234-1234
+                        </span>
+                      </div>
+                      <ul className="mt-2 space-y-1 text-xs sm:text-sm text-primary-foreground/90">
+                        <li>
+                          <span className="opacity-80">담당:</span>{" "}
+                          <span className="font-medium">손성훈 이사</span>
+                        </li>
+                        <li className="leading-relaxed">
+                          “대량 구매 및 B2B 납품 문의는 이 연락처로 연락
+                          부탁드립니다.”
+                        </li>
+                        <li>
+                          <span className="opacity-80">대표:</span>{" "}
+                          <span className="font-medium">010-1234-1234</span>
+                        </li>
+                        <li>
+                          <span className="opacity-80">대표메일:</span>
+                          <a
+                            href="mailto:fdbackteams@gmail.com"
+                            className="font-medium underline ml-1"
+                          >
+                            fdbackteams@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-xs sm:text-sm">
+              {/* 운영 시간 */}
+              <div className="mt-6 sm:mt-8 space-y-1 sm:space-y-2 text-primary-foreground/80 text-xs sm:text-sm">
                 <div data-testid="text-service-hours-weekday">
                   운영시간 : AM 10:00 ~ PM 17:00
                 </div>
                 <div data-testid="text-service-hours-weekend">
-                  점심시간 PM 12:30~ PM 13:30
+                  점심시간 PM 12:30 ~ PM 13:30
                 </div>
               </div>
             </div>
