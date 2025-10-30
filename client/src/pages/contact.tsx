@@ -158,7 +158,8 @@ export default function Contact() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-sm sm:text-base md:text-lg font-semibold break-keep leading-tight">
-                        제품 고장·불량 관련<br className="sm:hidden" /> CS 문의
+                        고객센터 (A/S)
+                        <br className="sm:hidden" />
                       </div>
                       <div className="mt-1.5 sm:mt-1 text-sm sm:text-base">
                         <span className="font-bold tracking-wide text-primary-foreground">
@@ -166,7 +167,9 @@ export default function Contact() {
                         </span>
                       </div>
                       <p className="mt-2 text-xs sm:text-sm text-primary-foreground/80 leading-relaxed break-keep">
-                        제품 고장 및 불량 문의는<br className="sm:hidden" /> 고객센터로 연락 부탁드립니다.
+                        제품 고장 및 불량 문의는
+                        <br className="sm:hidden" /> 고객센터로 연락
+                        부탁드립니다.
                       </p>
                     </div>
                   </div>
@@ -180,11 +183,12 @@ export default function Contact() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-sm sm:text-base md:text-lg font-semibold break-keep leading-tight">
-                        B2B 문의<br className="sm:hidden" />(대량 구매·회사 납품 등)
+                        B2B 문의
+                        <br className="sm:hidden" />
                       </div>
                       <div className="mt-1.5 sm:mt-1 text-sm sm:text-base">
                         <span className="font-bold tracking-wide text-primary-foreground">
-                          02-1234-1234
+                          070-8211-1761
                         </span>
                       </div>
                       <ul className="mt-2 space-y-1 text-xs sm:text-sm text-primary-foreground/90">
@@ -192,21 +196,22 @@ export default function Contact() {
                           <span className="opacity-80">담당:</span>{" "}
                           <span className="font-medium">손성훈 이사</span>
                         </li>
-                        <li className="leading-relaxed break-keep">
-                          대량 구매 및 B2B 납품 문의는<br className="sm:hidden" /> 이 연락처로 연락 부탁드립니다.
-                        </li>
-                        <li className="break-keep">
-                          <span className="opacity-80">대표:</span>{" "}
-                          <span className="font-medium">010-1234-1234</span>
-                        </li>
+
                         <li className="break-all">
-                          <span className="opacity-80 break-keep">대표메일:</span>
+                          <span className="opacity-80 break-keep">
+                            대표메일:
+                          </span>
                           <a
                             href="mailto:fdbackteams@gmail.com"
                             className="font-medium underline ml-1"
                           >
                             fdbackteams@gmail.com
                           </a>
+                        </li>
+                        <li className="leading-relaxed break-keep">
+                          대량 구매 및 B2B 납품 문의는
+                          <br className="sm:hidden" /> 담당자에게 연락
+                          부탁드립니다.
                         </li>
                       </ul>
                     </div>
@@ -216,10 +221,16 @@ export default function Contact() {
 
               {/* 운영 시간 */}
               <div className="mt-5 sm:mt-6 md:mt-8 space-y-1 sm:space-y-2 text-primary-foreground/80 text-xs sm:text-sm break-keep">
-                <div data-testid="text-service-hours-weekday" className="break-keep">
-                  운영시간 : AM 10:00 ~ PM 17:00
+                <div
+                  data-testid="text-service-hours-weekday"
+                  className="break-keep"
+                >
+                  운영시간 : AM 10:00 ~ PM 18:00
                 </div>
-                <div data-testid="text-service-hours-weekend" className="break-keep">
+                <div
+                  data-testid="text-service-hours-weekend"
+                  className="break-keep"
+                >
                   점심시간 PM 12:30 ~ PM 13:30
                 </div>
               </div>
